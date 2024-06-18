@@ -5,6 +5,8 @@
 	<groupId>pro_framework</groupId>
 	<artifactId>pro_framework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
@@ -55,7 +57,7 @@
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>7.18.0</version>
+			<version>7.3.4</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm-deps -->
@@ -161,39 +163,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!--
-		https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
-		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-picocontainer</artifactId>
-			<version>7.11.2</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
-		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-core</artifactId>
-			<version>7.15.0</version>
-		</dependency>
 
-
-		<dependency>
-			<groupId>com.bddFrameworks1</groupId>
-			<artifactId>com.bddFrameworks1</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.testingFramework</groupId>
-			<artifactId>com.testingFramework</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>nopcomm_cucumber</groupId>
-			<artifactId>nopcomm_cucumber</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		
 	</dependencies>
 
 </project>

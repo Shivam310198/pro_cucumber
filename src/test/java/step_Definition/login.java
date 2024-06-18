@@ -27,7 +27,7 @@ public class login {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver(options);
 
-		l = new loginPage();
+		l = new loginPage(driver);
 
 	}
 

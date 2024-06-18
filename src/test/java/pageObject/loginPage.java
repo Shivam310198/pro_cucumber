@@ -7,12 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 
 public class loginPage {
 
-	WebDriver ldriver;
+	public WebDriver ldriver;
 
-	public void loginPages(WebDriver rdriver) {
+	public loginPage(WebDriver rdriver) {
 		ldriver = rdriver;
 
-		PageFactory.initElements(rdriver, this);
+		PageFactory.initElements(ldriver, this);
 	}
 
 	@FindBy(xpath = "//div[@class= 'get_start_mobile']")
