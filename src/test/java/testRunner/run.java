@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 
 @CucumberOptions(features = ".//Features/login.feature", glue = "step_Definition", dryRun = false, monochrome = false, plugin = {
-		"pretty", "html:target/Cucumber-report/report2.html" })
+		"pretty", "html:target/Cucumber-report/report4.html" })
 
 // the cucumber file will always be empty
 public class run {

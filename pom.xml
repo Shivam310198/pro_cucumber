@@ -5,7 +5,7 @@
 	<groupId>pro_framework</groupId>
 	<artifactId>pro_framework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	
+
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -82,11 +82,19 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
-		<dependency>
+		<!--<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>gherkin</artifactId>
 			<version>23.0.1</version>
+		</dependency> -->
+
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-gherkin -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-gherkin</artifactId>
+			<version>7.13.0</version>
 		</dependency>
+
 
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>

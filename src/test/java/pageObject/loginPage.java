@@ -49,33 +49,58 @@ public class loginPage {
 	@FindBy(xpath = "//div[@class= 'submitButton']")
 	WebElement okay1;
 
-	public void mobileNumber(String m) throws InterruptedException {
-		Thread.sleep(1500);
+	public void mobileNumber(String m){
+		try {
+			Thread.sleep(1500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		mob.click();
-		Thread.sleep(1000);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		mobNum.sendKeys(m);
 		submit.click();
-		Thread.sleep(3000);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 //		okay.click();
 		Actions actions = new Actions(ldriver);
 		actions.moveToElement(popup).click().build().perform();
 	}
 
-	public void otp(String a, String b, String c, String d, String e, String f) throws InterruptedException {
-		Thread.sleep(3000);
+	public void otp(String a, String b, String c, String d, String e, String f){
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		o1.sendKeys(a);
 		o2.sendKeys(b);
 		o3.sendKeys(c);
 		o4.sendKeys(d);
 		o5.sendKeys(e);
 		o6.sendKeys(f);
-		Thread.sleep(10000);
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		Actions actions = new Actions(ldriver);
 		actions.moveToElement(okay1).click().build().perform();
 //		okay1.click();
 	}
 	
-	public String url() {
-		return ldriver.getCurrentUrl();
-	}
+//	public String url() {
+//		return ldriver.getCurrentUrl();
+//	}
 }

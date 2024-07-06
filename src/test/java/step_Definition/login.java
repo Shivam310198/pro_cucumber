@@ -1,5 +1,7 @@
 package step_Definition;
 
+import static org.testng.Assert.assertEquals;
+import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
@@ -8,13 +10,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObject.loginPage;
+import utils.SessionManager;
 
 public class login {
 	WebDriver driver;
 
 	loginPage l;
 
-	String expURl = "https://qa.prorewards.io/fut";
+	String expURl = "https://qa.prorewards.io/hjn";
 
 	@Given("Launch chrome browser")
 	public void launch_chrome_browser() {
@@ -38,7 +41,7 @@ public class login {
 	}
 
 	@When("enter mobile number and submit")
-	public void enter_mobile_number_and_submit() throws InterruptedException {
+	public void enter_mobile_number_and_submit() {
 //		Thread.sleep(3000);
 //		Scanner sc = new Scanner(System.in);
 //		System.out.print("Enter phone number:-");
@@ -48,7 +51,7 @@ public class login {
 	}
 
 	@When("enter OTP and submit")
-	public void enter_otp_and_submit() throws InterruptedException {
+	public void enter_otp_and_submit() {
 //		Thread.sleep(3000);
 //		Scanner sc = new Scanner(System.in);
 //		System.out.print("Enter OTP 1:- ");
@@ -68,12 +71,19 @@ public class login {
 
 	}
 
-	@Then("user land on earn page")
-	public void user_land_on_earn_page() throws InterruptedException {
+	@When("user land on earn page")
+	public void user_land_on_earn_page() throws InterruptedException, IOException {
+
 		Thread.sleep(4000);
+		SessionManager sessionManager = new SessionManager(driver);
+		sessionManager.storeSessionFile("qa.prorewards", "9310328351");
+
 //		String r = l.url();
-		expURl.equals(l.url());
-		
+//		expURl.equals(driver.getCurrentUrl());
+
+		String actUrl = driver.getCurrentUrl();
+		assertEquals(expURl, actUrl);
+//			assert.equal(this.actUrl, expURl);
 
 	}
 
@@ -85,3 +95,4 @@ public class login {
 	}
 
 }
+

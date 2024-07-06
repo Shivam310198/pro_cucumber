@@ -16,13 +16,16 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-Feature: Login
+Feature: Profile page
+@profile_page
 
-  @regression
-  Scenario: User login with mobile number
-    Given Launch chrome browser
-    And open URL
-    When enter mobile number and submit
-    And enter OTP and submit
-    And user land on earn page
-    Then close the browser
+Scenario: profile page
+    Given User logged in
+    And open profile page
+    And open mystats and go back
+    And open transactions and go back
+    And open refer & earn and go back
+    And Open pending earning and go back
+    And click on login info button
+    And click on logout button and logout
+    Then close the browser22
